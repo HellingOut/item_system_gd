@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://43uuatflqmkp"]
+
+[ext_resource type="Script" uid="uid://dg0xpogmc1n4l" path="res://addons/item_system/resouses/item_function.gd" id="1_54lqv"]
+[ext_resource type="Texture2D" uid="uid://beuvg0csk047g" path="res://assets/wear.png" id="2_0hbol"]
+[ext_resource type="Script" uid="uid://dpehmua1s6fdv" path="res://addons/item_system/resouses/item.gd" id="2_5x6ge"]
+
+[sub_resource type="Resource" id="Resource_54lqv"]
+script = ExtResource("1_54lqv")
+icon = ExtResource("2_0hbol")
+name = "Wear"
+callable_name = "play_local_cutscene"
+args = ["fade"]
+metadata/_custom_type_script = "uid://dg0xpogmc1n4l"
+
+[resource]
+script = ExtResource("2_5x6ge")
+name = "Cape"
+external_script = "uid://c6iu3gy188ik6"
+funcs = Array[ExtResource("1_54lqv")]([SubResource("Resource_54lqv")])
+metadata/_custom_type_script = "uid://dpehmua1s6fdv"

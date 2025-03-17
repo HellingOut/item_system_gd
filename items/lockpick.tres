@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://bjnwvei8pkavs"]
+
+[ext_resource type="Script" uid="uid://dg0xpogmc1n4l" path="res://addons/item_system/resouses/item_function.gd" id="1_1xl24"]
+[ext_resource type="Script" uid="uid://dpehmua1s6fdv" path="res://addons/item_system/resouses/item.gd" id="1_j61ov"]
+
+[sub_resource type="Resource" id="Resource_1xl24"]
+script = ExtResource("1_1xl24")
+name = "Print description"
+callable_name = "print_description"
+args = []
+metadata/_custom_type_script = "uid://dg0xpogmc1n4l"
+
+[sub_resource type="Resource" id="Resource_gcxye"]
+script = ExtResource("1_1xl24")
+name = "Show Item"
+callable_name = "show_item"
+args = []
+metadata/_custom_type_script = "uid://dg0xpogmc1n4l"
+
+[resource]
+script = ExtResource("1_j61ov")
+name = "lockpick"
+external_script = "uid://dx7sohc81qkyx"
+funcs = Array[ExtResource("1_1xl24")]([SubResource("Resource_1xl24"), SubResource("Resource_gcxye")])
+metadata/_custom_type_script = "uid://dpehmua1s6fdv"

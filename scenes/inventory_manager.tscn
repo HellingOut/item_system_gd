@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmovaar4q2b0r"]
+
+[ext_resource type="Script" uid="uid://1vahgvdjm227" path="res://scripts/inventory_manager.gd" id="1_m3p05"]
+[ext_resource type="Script" uid="uid://dpehmua1s6fdv" path="res://addons/item_system/resouses/item.gd" id="2_lq4so"]
+[ext_resource type="Resource" uid="uid://bjnwvei8pkavs" path="res://items/lockpick.tres" id="3_pdcy4"]
+[ext_resource type="Resource" uid="uid://43uuatflqmkp" path="res://items/cape.tres" id="4_pdcy4"]
+
+[node name="InventoryManager" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m3p05")
+inventory = Array[ExtResource("2_lq4so")]([ExtResource("3_pdcy4"), ExtResource("4_pdcy4")])
+
+[node name="Executor" type="Node" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Items" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Actions" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="script_changed" from="Executor" to="." method="_on_executor_script_changed"]
