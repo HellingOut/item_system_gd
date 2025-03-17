@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://ch5k34tr55p2f"]
+
+[ext_resource type="Script" uid="uid://fmsiol3pxkxd" path="res://addons/item_system/basic_acitvities.gd" id="1_j1krf"]
+
+[node name="BasicAcitvities" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+script = ExtResource("1_j1krf")
+metadata/_custom_type_script = "uid://fmsiol3pxkxd"
+
+[node name="PrintHello" type="Button" parent="."]
+layout_mode = 2
+text = "Print Hello"
+
+[node name="ShowItem" type="Button" parent="."]
+layout_mode = 2
+text = "Show Item"

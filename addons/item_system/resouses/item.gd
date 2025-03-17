@@ -3,5 +3,4 @@ class_name Item
 
 @export var name: String
 @export var texture: Texture2D
-@export_file("*.gd") var external_script: String
-@export var funcs: Array[ItemFunction]
+@export var scene_on_hover: PackedScene = preload("res://addons/item_system/basic_acitvities.tscn")
