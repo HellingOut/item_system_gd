@@ -19,3 +19,6 @@ text = "Print Hello"
 [node name="ShowItem" type="Button" parent="."]
 layout_mode = 2
 text = "Show Item"
+
+[connection signal="pressed" from="PrintHello" to="." method="_on_print_hello_pressed"]
+[connection signal="pressed" from="ShowItem" to="." method="_on_show_item_pressed"]
