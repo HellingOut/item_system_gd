@@ -1,24 +1,33 @@
-[gd_scene load_steps=2 format=3 uid="uid://ch5k34tr55p2f"]
+[gd_scene load_steps=4 format=3 uid="uid://ch5k34tr55p2f"]
 
 [ext_resource type="Script" uid="uid://fmsiol3pxkxd" path="res://addons/item_system/basic_acitvities.gd" id="1_j1krf"]
+[ext_resource type="Texture2D" uid="uid://daiiav1fc5eio" path="res://assets/question_icon.png" id="4_j8tmy"]
+[ext_resource type="Texture2D" uid="uid://de65mmle0hcf3" path="res://assets/watch.png" id="5_22slx"]
 
 [node name="BasicAcitvities" type="VBoxContainer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.5
+offset_top = -29.0
+offset_right = 56.5
+offset_bottom = 29.0
 grow_horizontal = 2
 grow_vertical = 2
-alignment = 1
 script = ExtResource("1_j1krf")
 metadata/_custom_type_script = "uid://fmsiol3pxkxd"
 
 [node name="PrintHello" type="Button" parent="."]
 layout_mode = 2
-text = "Print Hello"
+text = "Description"
+icon = ExtResource("4_j8tmy")
 
 [node name="ShowItem" type="Button" parent="."]
 layout_mode = 2
-text = "Show Item"
+text = "Watch"
+icon = ExtResource("5_22slx")
 
 [connection signal="pressed" from="PrintHello" to="." method="_on_print_hello_pressed"]
 [connection signal="pressed" from="ShowItem" to="." method="_on_show_item_pressed"]

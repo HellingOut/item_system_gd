@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://bv77eqiu1seq8"]
+
+[ext_resource type="PackedScene" uid="uid://ch5k34tr55p2f" path="res://addons/item_system/basic_acitvities.tscn" id="1_bikib"]
+[ext_resource type="Script" uid="uid://dpehmua1s6fdv" path="res://addons/item_system/resouses/item.gd" id="2_s2bgj"]
+[ext_resource type="Texture2D" uid="uid://tfe1l8fsq756" path="res://assets/itemiconpack32.png" id="3_s2bgj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtls5"]
+atlas = ExtResource("3_s2bgj")
+region = Rect2(6, 7, 18, 18)
+
+[resource]
+script = ExtResource("2_s2bgj")
+name = ""
+texture = SubResource("AtlasTexture_rtls5")
+scene_on_hover = ExtResource("1_bikib")
+metadata/_custom_type_script = "uid://dpehmua1s6fdv"

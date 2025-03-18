@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://dnn085mb0ks5e"]
+[gd_scene load_steps=2 format=3 uid="uid://dnn085mb0ks5e"]
+
+[ext_resource type="PackedScene" uid="uid://ppt8wl6ww7cc" path="res://examples/grid/grid_inventory.tscn" id="1_o5qli"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -8,3 +10,5 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="GridInventory" parent="." instance=ExtResource("1_o5qli")]
