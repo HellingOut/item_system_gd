@@ -23,10 +23,9 @@ func create_hover_scene(scene: PackedScene, parent: Node = self):
 		printerr("Invalid scene provided.")
 		return
 	var hovered_item_scene = scene.instantiate()
-	if not hovered_item_scene:
-		printerr("Failed to instantiate scene.")
-		return
 	hovered_item_scene.tree_exited.connect(_activate_slot)
+	if scene.has_method("set_item"):
+		scene.call("set_item")
 	parent.add_child(hovered_item_scene)
 
 func _activate_slot():
